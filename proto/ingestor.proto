@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+package yourpackage;
+
+import "google/protobuf/empty.proto";
+
+option go_package = "github.com/gabriwl165/commerce-system/proto";
+
+service UsageService {
+    rpc Consume (UsageInfoRequest) returns (google.protobuf.Empty);
+}
+  
+message UsageInfoRequest {
+    string tenant = 1;
+    string product_sku = 2;
+    int32 used_amount = 3;
+    string use_unity = 4;
+}

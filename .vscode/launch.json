@@ -1,0 +1,21 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Run Ingestor Api",
+            "type": "go",
+            "mode": "auto",
+            "request": "launch",
+            "program": "${workspaceFolder}/api_ingestor/cmd/grpc/main.go",
+            "console": "integratedTerminal"
+        },
+        {
+            "name": "Run Ingestor Consumer",
+            "type": "go",
+            "mode": "auto",
+            "request": "launch",
+            "program": "${workspaceFolder}/consumer_ingestor/cmd/kafka/main.go",
+            "console": "integratedTerminal"
+        }
+    ]
+}
