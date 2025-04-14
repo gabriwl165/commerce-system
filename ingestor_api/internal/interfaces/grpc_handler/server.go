@@ -4,6 +4,7 @@ import (
 	"context"
 	"encoding/json"
 	"fmt"
+	"log"
 
 	"github.com/gabriwl165/commerce-system/internal/infra/kafka"
 	"github.com/gabriwl165/commerce-system/proto"
@@ -27,7 +28,9 @@ func (s *UsageServiceServer) Consume(ctx context.Context, usageInfo *proto.Usage
 	if err := json.Unmarshal(bytes, &result); err != nil {
 		return nil, fmt.Errorf("failed to unmarshal JSON: %w", err)
 	}
-	kafka.SendEvent(context.Background(), "resource-consumption", result)
+	log.Print("Producing message into Kafka")
+	tenant := result["tenant"].(string)
+	kafka.SendEvent(context.Background(), tenant, result)
 
 	return nil, nil
 }

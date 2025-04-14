@@ -34,6 +34,32 @@ services:
     environment:
       KAFKA_BROKERCONNECT: kafka:29092
 
+  kafka-ui:
+    image: provectuslabs/kafka-ui:latest
+    networks:
+      - broker-kafka
+    ports:
+      - "8080:8080"
+    environment:
+      KAFKA_CLUSTERS_0_NAME: local
+      KAFKA_CLUSTERS_0_BOOTSTRAPSERVERS: kafka:29092
+
+  ingestor-api:
+    image: ingestor-api:latest
+    networks:
+      - broker-kafka
+    ports:
+      - "50051:50051"
+    environment:
+      KAFKA_BROKER: kafka:29092
+    
+  ingestor-consumer:
+    image: ingestor-consumer:latest
+    networks:
+      - broker-kafka
+    environment:
+      KAFKA_BROKER: kafka:29092
+
 networks:
   broker-kafka:
     driver: bridge

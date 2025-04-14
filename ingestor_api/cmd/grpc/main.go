@@ -4,6 +4,7 @@ import (
 	"log"
 	"net"
 
+	"github.com/gabriwl165/commerce-system/infra/env"
 	"github.com/gabriwl165/commerce-system/internal/infra/kafka"
 	"github.com/gabriwl165/commerce-system/internal/interfaces/grpc_handler"
 	"github.com/gabriwl165/commerce-system/proto"
@@ -30,7 +31,10 @@ func main() {
 
 	reflection.Register(grpcServer)
 
-	brokers := []string{"localhost:9092"}
+	envManager := env.Init()
+	kafkaBroker, _ := envManager.Read("KAFKA_BROKER")
+
+	brokers := []string{kafkaBroker.(string)}
 	kafka.InitProducer(
 		brokers,
 		"resource-consumption",

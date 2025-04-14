@@ -4,13 +4,13 @@ WORKDIR /app
 # Copy the rest of the application code
 COPY . .
 
-RUN go build -o ingestor-consumer cmd/kafka/main.go
+RUN go build -o ingestor cmd/grpc/main.go
 
 RUN apt-get update && apt-get install -y ca-certificates openssl
 
 RUN openssl req -x509 -newkey rsa:4096 -keyout tls_key.pem -out tls_cert.pem -days 365 -nodes -subj '/CN=localhost'
 
-EXPOSE 8080
+EXPOSE 50051
 
 # Run the binary
-CMD ["./ingestor-consumer"]
+CMD ["./ingestor"]
