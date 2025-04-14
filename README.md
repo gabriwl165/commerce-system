@@ -61,15 +61,15 @@ Decisões:
 Como essa API tem o objetivo de atender um front-end, o ideal é implementá-la em Python utilizando o FastAPI e aproveitar a geração automática de documentação via OpenAPI ou Swagger. Essa abordagem facilita a consulta pelos clientes, já que o gRPC ainda é uma tecnologia emergente para browsers e pode causar problemas de compatibilidade.
 
 ## Projetos Pessoais
-Web Framework (Python, AsyncIO):<br>
+Minha implementação de um Web Framework (Python, AsyncIO):<br>
 Gerencio os sockets na camada de rede e redireciono as requisições para o handler correto de cada URL.<br>
 Repositório: https://github.com/gabriwl165/python-web-framework
 
-Clean Architecture (Golang):<br>
+Uma implementação de Clean Architecture (Golang):<br>
 Implementei uma versão simples de Clean Architecture baseada na leitura do livro Domain-Driven Design, de Eric Evans.<br>
 Repositório: https://github.com/gabriwl165/clean-arch-go
 
-Banco de Dados com LSM Tree (Golang):<br>
+Minha implementação do meu próprio Banco de Dados com LSM Tree (Golang):<br>
 Trabalho nas horas vagas em uma implementação própria de banco de dados usando LSM Tree com índices tombstones. A ideia é criar um driver de conexão com o meu web framework assim que o banco estiver concluído.<br>
 Repositório: https://github.com/gabriwl165/go-db
 
