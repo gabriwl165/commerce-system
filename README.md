@@ -4,14 +4,16 @@
 
 Para iniciar o projeto, execute: `make build && make compose`. O comando build é responsável por gerar a imagem dos serviços ingestor_api e ingestor_consumer, enquanto o comando compose sobe os containers gerados juntamente com o Kafka e a interface do Kafka UI, que pode ser acessada em http://localhost:8080/.
 
-## FIAP (Pós-Graduação) - Sistema de Gerenciamento de Pedidos de Compra
+## FIAP (Pós-Graduação) - Software Architeture
+Desenvolvemos um sistema de Gerenciamento de Pedidos de Compra como entregáveis durante o curso
 
 Micro Serviço para Gerenciamento do Status de Pedidos:
-Desenvolvido em Go, Gin, AWS SQS, AWS ECR, AWS EKS.
+Desenvolvido em Go, Gin, AWS SQS, AWS ECR, AWS EKS, MongoDB.
 Repositório: https://github.com/FIAP-6SOAT-G10/fiap-fast-food-ms-producao
 Repositório Infraestrutura Kubernetes: https://github.com/FIAP-6SOAT-G10/fiap-fast-food-ms-producao-k8s
 
 Micro Serviço para Gerenciamento de URLs Pré-Assinadas:
+Desenvolvido em Python, FastAPI, AWS S3, MongoDB.
 Gerencia o upload direto de arquivos para o AWS S3 e inclui a infraestrutura Kubernetes.
 Repositório: https://github.com/FIAP-6SOAT-G10/fiap-mpeg-uploader
 
