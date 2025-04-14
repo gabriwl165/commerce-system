@@ -6,7 +6,7 @@ import (
 	"fmt"
 	"log"
 
-	"github.com/gabriwl165/commerce-system/internal/infra/kafka"
+	"github.com/gabriwl165/commerce-system/internal/pkg"
 	"github.com/gabriwl165/commerce-system/proto"
 	"google.golang.org/protobuf/encoding/protojson"
 	"google.golang.org/protobuf/types/known/emptypb"
@@ -15,6 +15,7 @@ import (
 // server is used to implement helloworld.GreeterServer.
 type UsageServiceServer struct {
 	proto.UsageServiceServer
+	BrokerProducer pkg.BrokerProducer
 }
 
 func (s *UsageServiceServer) Consume(ctx context.Context, usageInfo *proto.UsageInfoRequest) (*emptypb.Empty, error) {
@@ -30,7 +31,6 @@ func (s *UsageServiceServer) Consume(ctx context.Context, usageInfo *proto.Usage
 	}
 	log.Print("Producing message into Kafka")
 	tenant := result["tenant"].(string)
-	kafka.SendEvent(context.Background(), tenant, result)
-
+	s.BrokerProducer.Write(context.Background(), tenant, result)
 	return nil, nil
 }

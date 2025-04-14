@@ -2,7 +2,6 @@ package env
 
 import (
 	"errors"
-	"log"
 	"os"
 	"strings"
 )
@@ -31,6 +30,5 @@ func Init() *EnvManager {
 		values := strings.Split(env, "=")
 		envManager.Write(values[0], values[1])
 	}
-	log.Print(envManager.envs)
 	return envManager
 }

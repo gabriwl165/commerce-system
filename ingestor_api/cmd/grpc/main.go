@@ -17,11 +17,18 @@ func main() {
 	if err != nil {
 		log.Fatalf("Failed to listen: %v", err)
 	}
-
+	envManager := env.Init()
+	kafkaBroker, _ := envManager.Read("KAFKA_BROKER")
 	// Create a new gRPC server instance
 	grpcServer := grpc.NewServer()
-
-	server := grpc_handler.UsageServiceServer{}
+	brokers := []string{
+		kafkaBroker.(string),
+	}
+	topic_producer := "processor-storage-consumption"
+	producer := kafka.InitProducer(brokers, topic_producer)
+	server := grpc_handler.UsageServiceServer{
+		BrokerProducer: producer,
+	}
 
 	// Register the Greeter server
 	proto.RegisterUsageServiceServer(grpcServer, &server)
@@ -30,11 +37,6 @@ func main() {
 	log.Printf("Server listening at %v", lis.Addr())
 
 	reflection.Register(grpcServer)
-
-	envManager := env.Init()
-	kafkaBroker, _ := envManager.Read("KAFKA_BROKER")
-
-	brokers := []string{kafkaBroker.(string)}
 	kafka.InitProducer(
 		brokers,
 		"resource-consumption",
