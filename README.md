@@ -16,6 +16,8 @@ O design funcional, por sua vez, nos ajuda a dividir grandes implementações em
 
 ## Parte 2:
 
+- Link para Exemplo de Requisição Postman: https://www.postman.com/fiap-tech/workspace/my-workspace/collection/67f86a7441a7c2a8bc2f442f?action=share&creator=37214072
+
 Nesta parte do desafio, implementei a lógica de Ingestor, para isso levei alguns pontos na decisão da arquitetura:
 
 - Tolerância a Falhas (Fault Tolerance): Como podemos garantir caso alguns desses microsserviços fiquem fora do ar, seja possível reprocessar todas mensagens a fim que nenhum "pulso" seja perdido da contabilidade.
@@ -28,7 +30,16 @@ Nesta parte do desafio, implementei a lógica de Ingestor, para isso levei algun
 
 ### Ingestor Api:
 gRPC:
-A serialização no gRPC é feita com Protocol Buffers, o que, por trabalhar com dados em formato binário, torna a comunicação entre serviços de 7 a 10 vezes mais rápida que HTTP/HTTPS. Isso melhora a performance de I/O da nossa API sem precisar escalar imediatamente, mesmo com um aumento significativo no número de requisições. Além disso, como o contrato da API fica centralizado em arquivos proto, evitamos que clientes enviem interfaces incorretas, visto que conforme o sistema escala e complexidades são adicionadas, tende-se a perder o controle do que recebemos como requisição em nossos controladores.
+A serialização no gRPC é feita com Protocol Buffers, o que, por trabalhar com dados em formato binário, torna a comunicação entre serviços de 7 a 10 vezes mais rápida que HTTP/HTTPS. Isso melhora a performance de I/O da nossa API sem precisar escalar imediatamente, mesmo com um aumento significativo no número de requisições. Além disso, como o contrato da API fica centralizado em arquivos proto, evitamos que clientes enviem interfaces incorretas, visto que conforme o sistema escala e complexidades são adicionadas, tende-se a perder o controle do que recebemos como requisição em nossos controladores. Neste caso assumimos essa interface:
+
+```json
+{
+    "tenant": "user123",
+    "product_sku": "vm",
+    "used_amount": 3,
+    "use_unity": "kb"
+}
+```
 
 Kafka:
 Logo que recebemos o nosso “pulso”, os dados são enviados diretamente para uma fila no Kafka. Dessa forma, o processamento ocorre de forma assíncrona, já que o cliente não precisa dessas informações processadas naquele exato momento.
