@@ -79,7 +79,7 @@ Desenvolvemos um sistema de Gerenciamento de Pedidos de Compra como entregáveis
 Micro Serviço para Gerenciamento do Status de Pedidos: <br>
 Desenvolvido em Go, Gin, AWS SQS, AWS ECR, AWS EKS, MongoDB.<br>
 Repositório: https://github.com/FIAP-6SOAT-G10/fiap-fast-food-ms-producao<br>
-Repositório Infraestrutura Kubernetes: https://github.com/FIAP-6SOAT-G10/fiap-fast-food-ms-producao-k8s<br>
+Repositório Infraestrutura Kubernetes (k8s): https://github.com/FIAP-6SOAT-G10/fiap-fast-food-ms-producao-k8s<br>
 
 Micro Serviço para Gerenciamento de URLs Pré-Assinadas:<br>
 Desenvolvido em Python, FastAPI, AWS S3, MongoDB.<br>
