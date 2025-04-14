@@ -4,6 +4,11 @@
 
 Como os princípios SOLID e de design funcional podem ser aplicados para maximizar a capacidade das equipes de integrar, estender e evoluir arquiteturas complexas de software?
 
+R: Os princípios SOLID e o design funcional podem oferecer uma arquitetura de software modular, flexível e testável. Basicamente, o SOLID nos auxilia na divisão de responsabilidades das nossas implementações. Por exemplo, o SRP (Single Responsibility Principle) afirma que uma função ou classe deve ter apenas uma responsabilidade. Somado à DIP (Dependency Inversion Principle), isso possibilita alterar nossa implementação utilizando interfaces ou camadas de abstração (Interface Segregation Principle). Dessa forma, injetamos nossa implementação no construtor da classe.
+
+Utilizando o ISP (Interface Segregation Principle), criamos uma camada que separa nossa implementação da abstração, facilitando alterações em frameworks ou regras de negócio. Essas práticas também colaboram para a aplicação do OCP (Open/Closed Principle), que dita que uma implementação deve estar aberta para extensão, porém fechada para alteração. Com essas estratégias, o SOLID contribui para a segregação de responsabilidades, facilitando os testes e a leitura do código, além de tornar claras as camadas de negócio e de infraestrutura, por exemplo.
+
+O design funcional, por sua vez, nos ajuda a dividir grandes implementações em pequenas funções, o que melhora a legibilidade do código e torna mais fácil identificar onde alterar ou implementar novas funcionalidades. A utilização da composição de funções permite criar uma classe ou função responsável por gerenciar pequenas funções. Dessa maneira, além de aplicar o OCP, ICP e o SRP, contribuímos para a manutenibilidade e o registro (logging) do nosso código, sendo muito mais simples debugar uma função pequena de 50 linhas com seu contexto delimitado do que navegar por classes extensas com centenas de linhas de código.
 
 ## Parte 2:
 
