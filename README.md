@@ -7,7 +7,7 @@ Apenas rodando
 build: Será responsável por buildar a imagem tanto do ingestor_api, como do ingestor_consumer.
 compose: Irá subir as imagens buildadas, kafka e o kafka ui, que você pode checar em http://localhost:8080/
 
-## Projetos que podem te interessar
+## Projetos que podem interessar
 - Tenho minha própria implementação de Web Framework, fazendo o handle dos sockets na camada de rede e redirecionando para o handler correto daquela URL:
 https://github.com/gabriwl165/python-web-framework
 
