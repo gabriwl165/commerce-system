@@ -1,5 +1,22 @@
 # Magalu Cloud Back-end Desafio
 
+## Como Iniciar o Projeto
+
+Apenas rodando
+`make build && make compose`
+build: Será responsável por buildar a imagem tanto do ingestor_api, como do ingestor_consumer.
+compose: Irá subir as imagens buildadas, kafka e o kafka ui, que você pode checar em http://localhost:8080/
+
+## Projetos que podem te interessar
+- Tenho minha própria implementação de Web Framework, fazendo o handle dos sockets na camada de rede e redirecionando para o handler correto daquela URL:
+https://github.com/gabriwl165/python-web-framework
+
+- Tenho uma simples implementação de Clean Architeture, que desenvolvi durante o curso do Branas.IO e a leitura do livro Domain Driven Design do Eric Evans
+https://github.com/gabriwl165/clean-arch-go
+
+- Atualmente trabalhando nas horas vagas na minha própria implementação de banco de dados usando LSM Tree com indices tombstones, a ideia é fazer um driver de conexão com meu web framework assim que estiver concluída.
+https://github.com/gabriwl165/go-db
+
 ## Parte 1:
 
 Como os princípios SOLID e de design funcional podem ser aplicados para maximizar a capacidade das equipes de integrar, estender e evoluir arquiteturas complexas de software?
