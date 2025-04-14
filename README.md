@@ -4,32 +4,6 @@
 
 Para iniciar o projeto, execute: `make build && make compose`. O comando build é responsável por gerar a imagem dos serviços ingestor_api e ingestor_consumer, enquanto o comando compose sobe os containers gerados juntamente com o Kafka e a interface do Kafka UI, que pode ser acessada em http://localhost:8080/.
 
-## FIAP (Pós-Graduação) - Software Architeture
-Desenvolvemos um sistema de Gerenciamento de Pedidos de Compra como entregáveis durante o curso
-
-Micro Serviço para Gerenciamento do Status de Pedidos: <br>
-Desenvolvido em Go, Gin, AWS SQS, AWS ECR, AWS EKS, MongoDB.<br>
-Repositório: https://github.com/FIAP-6SOAT-G10/fiap-fast-food-ms-producao<br>
-Repositório Infraestrutura Kubernetes: https://github.com/FIAP-6SOAT-G10/fiap-fast-food-ms-producao-k8s<br>
-
-Micro Serviço para Gerenciamento de URLs Pré-Assinadas:<br>
-Desenvolvido em Python, FastAPI, AWS S3, MongoDB.<br>
-Gerencia o upload direto de arquivos para o AWS S3 e inclui a infraestrutura Kubernetes.<br>
-Repositório: https://github.com/FIAP-6SOAT-G10/fiap-mpeg-uploader
-
-## Projetos Pessoais
-Web Framework (Python, AsyncIO):<br>
-Gerencio os sockets na camada de rede e redireciono as requisições para o handler correto de cada URL.<br>
-Repositório: https://github.com/gabriwl165/python-web-framework
-
-Clean Architecture (Golang):<br>
-Implementei uma versão simples de Clean Architecture baseada na leitura do livro Domain-Driven Design, de Eric Evans.<br>
-Repositório: https://github.com/gabriwl165/clean-arch-go
-
-Banco de Dados com LSM Tree (Golang):<br>
-Trabalho nas horas vagas em uma implementação própria de banco de dados usando LSM Tree com índices tombstones. A ideia é criar um driver de conexão com o meu web framework assim que o banco estiver concluído.<br>
-Repositório: https://github.com/gabriwl165/go-db
-
 ## Parte 1:
 
 Como os princípios SOLID e de design funcional podem ser aplicados para maximizar a capacidade das equipes de integrar, estender e evoluir arquiteturas complexas de software?
@@ -85,3 +59,29 @@ O Catálogo vai consumir os dados agregados e fazer a precificação correta. A 
 ### Consulta:
 Decisões:
 Como essa API tem o objetivo de atender um front-end, o ideal é implementá-la em Python utilizando o FastAPI e aproveitar a geração automática de documentação via OpenAPI ou Swagger. Essa abordagem facilita a consulta pelos clientes, já que o gRPC ainda é uma tecnologia emergente para browsers e pode causar problemas de compatibilidade.
+
+## Projetos Pessoais
+Web Framework (Python, AsyncIO):<br>
+Gerencio os sockets na camada de rede e redireciono as requisições para o handler correto de cada URL.<br>
+Repositório: https://github.com/gabriwl165/python-web-framework
+
+Clean Architecture (Golang):<br>
+Implementei uma versão simples de Clean Architecture baseada na leitura do livro Domain-Driven Design, de Eric Evans.<br>
+Repositório: https://github.com/gabriwl165/clean-arch-go
+
+Banco de Dados com LSM Tree (Golang):<br>
+Trabalho nas horas vagas em uma implementação própria de banco de dados usando LSM Tree com índices tombstones. A ideia é criar um driver de conexão com o meu web framework assim que o banco estiver concluído.<br>
+Repositório: https://github.com/gabriwl165/go-db
+
+## FIAP (Pós-Graduação) - Software Architeture
+Desenvolvemos um sistema de Gerenciamento de Pedidos de Compra como entregáveis durante o curso
+
+Micro Serviço para Gerenciamento do Status de Pedidos: <br>
+Desenvolvido em Go, Gin, AWS SQS, AWS ECR, AWS EKS, MongoDB.<br>
+Repositório: https://github.com/FIAP-6SOAT-G10/fiap-fast-food-ms-producao<br>
+Repositório Infraestrutura Kubernetes: https://github.com/FIAP-6SOAT-G10/fiap-fast-food-ms-producao-k8s<br>
+
+Micro Serviço para Gerenciamento de URLs Pré-Assinadas:<br>
+Desenvolvido em Python, FastAPI, AWS S3, MongoDB.<br>
+Gerencia o upload direto de arquivos para o AWS S3 e inclui a infraestrutura Kubernetes.<br>
+Repositório: https://github.com/FIAP-6SOAT-G10/fiap-mpeg-uploader
