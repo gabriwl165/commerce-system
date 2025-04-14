@@ -7,27 +7,27 @@ Para iniciar o projeto, execute: `make build && make compose`. O comando build �
 ## FIAP (Pós-Graduação) - Software Architeture
 Desenvolvemos um sistema de Gerenciamento de Pedidos de Compra como entregáveis durante o curso
 
-Micro Serviço para Gerenciamento do Status de Pedidos:
-Desenvolvido em Go, Gin, AWS SQS, AWS ECR, AWS EKS, MongoDB.
-Repositório: https://github.com/FIAP-6SOAT-G10/fiap-fast-food-ms-producao
-Repositório Infraestrutura Kubernetes: https://github.com/FIAP-6SOAT-G10/fiap-fast-food-ms-producao-k8s
+Micro Serviço para Gerenciamento do Status de Pedidos: <br>
+Desenvolvido em Go, Gin, AWS SQS, AWS ECR, AWS EKS, MongoDB.<br>
+Repositório: https://github.com/FIAP-6SOAT-G10/fiap-fast-food-ms-producao<br>
+Repositório Infraestrutura Kubernetes: https://github.com/FIAP-6SOAT-G10/fiap-fast-food-ms-producao-k8s<br>
 
-Micro Serviço para Gerenciamento de URLs Pré-Assinadas:
-Desenvolvido em Python, FastAPI, AWS S3, MongoDB.
-Gerencia o upload direto de arquivos para o AWS S3 e inclui a infraestrutura Kubernetes.
+Micro Serviço para Gerenciamento de URLs Pré-Assinadas:<br>
+Desenvolvido em Python, FastAPI, AWS S3, MongoDB.<br>
+Gerencia o upload direto de arquivos para o AWS S3 e inclui a infraestrutura Kubernetes.<br>
 Repositório: https://github.com/FIAP-6SOAT-G10/fiap-mpeg-uploader
 
 ## Projetos Pessoais
-Web Framework (Python, AsyncIO):
-Gerencio os sockets na camada de rede e redireciono as requisições para o handler correto de cada URL.
+Web Framework (Python, AsyncIO):<br>
+Gerencio os sockets na camada de rede e redireciono as requisições para o handler correto de cada URL.<br>
 Repositório: https://github.com/gabriwl165/python-web-framework
 
-Clean Architecture (Golang):
-Implementei uma versão simples de Clean Architecture baseada na leitura do livro Domain-Driven Design, de Eric Evans.
+Clean Architecture (Golang):<br>
+Implementei uma versão simples de Clean Architecture baseada na leitura do livro Domain-Driven Design, de Eric Evans.<br>
 Repositório: https://github.com/gabriwl165/clean-arch-go
 
-Banco de Dados com LSM Tree (Golang):
-Trabalho nas horas vagas em uma implementação própria de banco de dados usando LSM Tree com índices tombstones. A ideia é criar um driver de conexão com o meu web framework assim que o banco estiver concluído.
+Banco de Dados com LSM Tree (Golang):<br>
+Trabalho nas horas vagas em uma implementação própria de banco de dados usando LSM Tree com índices tombstones. A ideia é criar um driver de conexão com o meu web framework assim que o banco estiver concluído.<br>
 Repositório: https://github.com/gabriwl165/go-db
 
 ## Parte 1:
