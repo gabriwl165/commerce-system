@@ -1,5 +1,3 @@
-# Magalu Cloud Back-end Desafio
-
 ## Como Iniciar o Projeto
 
 Para iniciar o projeto, execute: `make build && make compose`. O comando build é responsável por gerar a imagem dos serviços ingestor_api e ingestor_consumer, enquanto o comando compose sobe os containers gerados juntamente com o Kafka e a interface do Kafka UI, que pode ser acessada em http://localhost:8080/.
